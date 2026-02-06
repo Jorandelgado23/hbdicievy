@@ -255,10 +255,25 @@
     })
 </script>
 <!-- Background Music -->
-<audio autoplay loop>
+<audio id="bg-music" autoplay loop>
     <source src="./images/Happy_Birthday.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+<button id="music-toggle">🎵 Pause/Play Music</button>
 
+<script>
+    const music = document.getElementById('bg-music');
+    const toggleBtn = document.getElementById('music-toggle');
+
+    toggleBtn.addEventListener('click', () => {
+        if (music.paused) {
+            music.play();
+            toggleBtn.textContent = "🎵 Pause Music";
+        } else {
+            music.pause();
+            toggleBtn.textContent = "🎵 Play Music";
+        }
+    });
+</script>
 
 </html>
