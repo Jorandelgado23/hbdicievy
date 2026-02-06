@@ -39,7 +39,7 @@ body {
     display: flex;
     justify-content: space-between;
     transform: translateY(-200px);
-    animation: translateYFlag 1.5s 2s forwards;
+    animation: translateYFlag 0.5s 2s forwards;
 }
 @keyframes translateYFlag{
     to{
